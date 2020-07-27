@@ -21,3 +21,4 @@ For all of them there are other easier ways to approach but the point here is to
   - This is made by poisoning the ARP tables of the target and the router.
   - The objetive is achieved by using the **scapy** library  and sending an ARP responses to both router and target.
   - That is similar to use the **arpspoof** tool.
+  - This attack can be performed due to the insecurity of the ARP protocol: It allows that clients accept responses even though they didn't make any request, and the clients just trust the responses they get without any kind of verification.
