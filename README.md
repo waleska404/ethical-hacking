@@ -14,3 +14,10 @@ For all of them there are other easier ways to approach but the point here is to
   - It specifies the IP address and the MAC address of each device founded.
   - The objetive is achieved by using the **scapy** library  and sending an ARP request in broadcast.
   - That is similar to use the **netdiscover** command.
+
+# ARP Spoofer (arp_spoof.py)
+
+  - This ARP spoofer allows you to specify a target and a router and perfoms the attack 'ARP spoofing'.
+  - This is made by poisoning the ARP tables of the target and the router.
+  - The objetive is achieved by using the **scapy** library  and sending an ARP responses to both router and target.
+  - That is similar to use the **arpspoof** tool.
