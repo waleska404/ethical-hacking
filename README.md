@@ -28,6 +28,5 @@ For all of them there are other easier ways to approach but the point here is to
 
   - Once you become the woman in the middle with ARP Spoofing (for exemple), this program allows you to sniff the packets.
   - It designed to sniff the http packets but it can be modified to add other filters.
-  - The objetive is achieved by using the **scapy** library  and sending an ARP responses to both router and target.
-  - That is similar to use the **arpspoof** tool.
-  - This attack can be performed due to the insecurity of the ARP protocol: It allows that clients accept responses even though they didn't make any request, and the clients just trust the responses they get without any kind of verification.
+  - The objetive is achieved by using the **scapy** library ans sniffing the interface that packets are going through.
+  - Once the program sniff the packets it filters them to get the possible usernames and passwords intercepted.
