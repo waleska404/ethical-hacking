@@ -31,5 +31,8 @@ For all of them there are other easier ways to approach but the point here is to
   - The objetive is achieved by using the **scapy** library and sniffing the interface that packets are going through.
   - Once the program sniff the packets it filters them to get the possible usernames and passwords intercepted.
   
-
 ## DNS Spoofer (dns_spoof.py)
+
+- This DNS spoofer allows you to specify a target and some keywords to choose what site you want to target, and perfoms the attack 'DNS spoofing'.
+- This is made by perfoming an ARP spoofing and trapping the packets in a queue, once in that queue, modifying the packets and resend them.
+- The objective is achieved by using the **scapy** library.
