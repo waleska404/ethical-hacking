@@ -30,3 +30,6 @@ For all of them there are other easier ways to approach but the point here is to
   - It designed to sniff the http packets but it can be modified to add other filters.
   - The objetive is achieved by using the **scapy** library and sniffing the interface that packets are going through.
   - Once the program sniff the packets it filters them to get the possible usernames and passwords intercepted.
+  
+
+## DNS Spoofer (dns_spoof.py)
