@@ -1,7 +1,7 @@
 # Ethical-Hacking
 
 Some scrpits to get started in ethical hacking with python.
-For all of them there are other simpler and faster ways to approach but the point here is to understand deep down what is going on and to learn python.
+For all of them there are other more automated/high level ways to approach but the point here is to understand deep down what is going on and to learn python.
 
 ## Mac Changer (mac_changer.py)
 
